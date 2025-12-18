@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 164px;
+        }
+
+        .right ul {
+            display: flex;
+            gap: 34px;
+        }
+
+        .right ul li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .right ul li span {
+            padding: 0 5px;
+        }
+
+        .grid-thing {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .download-header {
+            width: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+
+        .download-header img {
+            width: 30px;
+            height: 30px;
+            margin: 10px;
+        }
+
+        .grid-area {
+            width: 800px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .item {
+            width: 250px;
+            height: 150px;
+            border-radius: 10px;
+            background-color: rgb(241, 241, 241);
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            .download-header {
+            width: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+            .grid-area {
+                width: 90%;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4, 1fr);
+            }
+        }
+
+        .item h3 {
+            grid-column: span 2;
+            justify-self: center;
+        }
+
+        .item button {
+            margin: 5px;
+            font-size: 13px;
+            height: 50px;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/Dark-logo.png" alt="">
+        </div>
+        <div class="right">
+            <ul>
+                <li><span>Products </span><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                            stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </li>
+                <li><span>Pricing </span><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                            stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </li>
+                <li><span>Resources </span><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                            stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </li>
+                <li><span>About Us </span><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                            stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </li>
+                <li>
+                    <img src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png" alt="">
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    <div class="grid-thing">
+        <div class="download-header">
+            <img src="exercise3.png" alt="">
+            <h3>Download UltraEdit <small>v2025.1 (released 2025-12-11)
+        </div>
+
+        <div class="grid-area">
+            <div class="item">
+                <h3>English</h3>
+                <button style="background-color: rgb(18, 132, 220); color: white;">Download 32-bit</button>
+                <button style="background-color: seagreen; color: white;">
+                    Download 64-bit
+                </button>
+            </div>
+            <div class="item">
+                <h3>English</h3>
+                <button style="background-color: rgb(18, 132, 220); color: white;">Download 32-bit</button>
+                <button style="background-color: seagreen; color: white;">Download 64-bit</button>
+            </div>
+            <div class="item">
+                <h3>English</h3>
+                <button style="background-color: rgb(18, 132, 220); color: white;">Download 32-bit</button>
+                <button style="background-color: seagreen; color: white;">Download 64-bit</button>
+            </div>
+            <div class="item">
+                <h3>English</h3>
+                <button style="background-color: rgb(18, 132, 220); color: white;">Download 32-bit</button>
+                <button style="background-color: seagreen; color: white;">Download 64-bit</button>
+            </div>
+            <div class="item">
+                <h3>English</h3>
+                <button style="background-color: rgb(18, 132, 220); color: white;">Download 32-bit</button>
+                <button style="background-color: seagreen; color: white;">Download 64-bit</button>
+            </div>
+            <div class="item">
+                <h3>English</h3>
+                <button style="background-color: rgb(18, 132, 220); color: white;">Download 32-bit</button>
+                <button style="background-color: seagreen; color: white;">Download 64-bit</button>
+            </div>
+            <div class="item">
+                <h3>English</h3>
+                <button style="background-color: rgb(18, 132, 220); color: white;">Download 32-bit</button>
+                <button style="background-color: seagreen; color: white;">Download 64-bit</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

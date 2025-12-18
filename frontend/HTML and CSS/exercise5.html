@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* CRITICAL FIX */
+        }
+
+        body {
+            font-family: Arial, sans-serif; /* Added for better readability */
+        }
+
+        .nav {
+            position: fixed;
+            width: 100%;
+            background-color: blueviolet;
+            padding: 20px;
+            top: 0;
+            z-index: 1000; /* Ensures nav stays on top of everything */
+        }
+
+        .nav ul {
+            list-style: none; /* Removes bullet points */
+        }
+
+        .nav ul li {
+            display: inline;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .full {
+            width: 100%;
+            /* Removed fixed height to allow content to grow */
+            min-height: 500px; 
+            background-color: green;
+            padding-top: 100px; /* Space for the fixed nav */
+            display: flex;
+            justify-content: center; /* Centers the boxes horizontally */
+            flex-wrap: wrap; /* Prevents breaking on small screens */
+        }
+
+        .big1 , .big2 {
+            width: 40%;
+            height: 300px;
+            background-color: lightcoral;
+            margin: 2.5%;
+            padding: 20px;
+        }
+
+        .big2 {
+            background-color: rgb(79, 198, 238);
+        }
+
+        .middle {
+            width: 100%;
+            min-height: 500px;
+            background-color: black;
+            padding: 100px;
+            display: flex; /* Use flexbox to center the welcome box */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .welcome {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            border: 2px solid white;
+            border-radius: 25px;
+            padding: 20px;
+            width: 75%;
+            /* Flexbox in parent (.middle) handles alignment now */
+        }
+
+        .footer {
+            width: 100%;
+            padding: 40px;
+            font-size: 20px;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .icon {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 20px; /* Better than top: 80% for consistency */
+            right: 20px;  /* Better than left: 90% */
+            z-index: 1001; /* Above everything */
+            /* Center content inside the circle if you add an icon later */
+            /* display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="exercise6.html">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="full">
+        <div class="big1"></div>
+        <div class="big2"></div>
+    </div>
+
+    <div class="middle">
+        <div class="welcome">
+            Welcome to Sigma!
+        </div>
+    </div>
+
+    <div class="footer">
+        <ul>
+            <li><a href="exercise6.html">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="icon"></div>
+</body>
+
+</html>
