@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             color: rgb(229, 227, 227);
-            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
+        body {
+            background-color: rgb(32, 31, 31);
+            display: flex;
+            flex-direction: column;
+        }
+    
         .container {
             background-color: rgb(12, 12, 12);
+            margin: 5px;
             height: 125px;
             width: 650px;
             border-radius: 7px;
@@ -51,6 +58,7 @@
             margin: 0%;
             object-fit: contain;
         }
+
         .timeDuration {
             position: sticky;
             margin-top: 75px;
@@ -59,7 +67,7 @@
             padding: 2px 5px 2px 5px;
             border-radius: 5px;
             font-size: 12px;
-            color: white;    
+            color: white;
             /* opacity: 0.7; */
             z-index: 10;
         }
@@ -67,35 +75,22 @@
         .text {
             padding: 10px;
         }
-        .text .title{
+
+        .text .title {
             font-size: 15px;
             margin-top: 10px;
             margin-bottom: 15px;
         }
-        .text span{
-            display:flex;
-            gap:10px;
+
+        .text span {
+            display: flex;
+            gap: 10px;
             font-size: 13px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="number">1</div>
-        <div class="thumbnail">
-            <image src="image" alt="thumbnail"></image>
-            <span class="timeDuration"><b>duration</b></span>
-        </div>
-        <div class="text">
-            <div class="title"><b>Title</b></div>
-            <span>
-                <div class="cName">channel</div>·
-                <div class="views">views</div>·
-                <div class="monthsOld">time</div>
-            </span>
-        </div>
-    </div>
     <script src="script.js"></script>
 </body>
 
