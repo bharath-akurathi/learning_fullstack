@@ -1,3 +1,23 @@
+// // simple callback example
+
+// function sum(a,b){
+//     return a+b
+// }
+
+// function calculator(a,b,sumcall){
+//     sumcall(a,b)
+// }
+
+// // calculator(1,2,sum)
+
+
+// // calculator(1,2,sum()) // wont work
+// // another version is 
+
+// calculator(1,2,(a,b)=>{
+//     return a+b
+// });
+
 // const callback = (arg) => {
 //     console.log(arg)
 // }
