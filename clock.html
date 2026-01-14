@@ -1,9 +1,9 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Digital Seconds Clock</title>
-
+    <title>Digital Clock</title>
     <style>
         body {
             margin: 0;
@@ -11,7 +11,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #1d2671, #c33764);
+            background-color:darkgreen;
             font-family: 'Segoe UI', Tahoma, sans-serif;
         }
 
@@ -19,7 +19,7 @@
             background: rgba(0, 0, 0, 0.7);
             padding: 30px 60px;
             border-radius: 12px;
-            color: #00ffcc;
+            color: #ffffff;
             font-size: 48px;
             letter-spacing: 4px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
@@ -34,6 +34,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <div>
@@ -46,16 +47,9 @@
     <script>
         function updateClock() {
             const now = new Date();
-
             let hours = now.getHours();
             let minutes = now.getMinutes();
             let seconds = now.getSeconds();
-
-            // Add leading zero if needed
-            hours = hours < 10 ? "0" + hours : hours;
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-
             const timeString = `${hours}:${minutes}:${seconds}`;
             document.getElementById("digitalClock").textContent = timeString;
         }
@@ -68,4 +62,5 @@
     </script>
 
 </body>
-</html> -->
+
+</html>
