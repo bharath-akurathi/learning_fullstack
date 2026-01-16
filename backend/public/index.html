@@ -15,6 +15,16 @@
     </style>
 </head>
 <body>
-    
+    <h1>this is publicly visible</h1>
+    <script>
+        async function test_post() {
+            let a = await fetch("/",{method: "GET"})
+            // let a = await fetch("/",{method: "POST"})
+            // let a = await fetch("/",{method: "PUT"})
+            let b = await a.text()
+            console.log(b)
+        }
+        test_post()
+    </script>
 </body>
 </html>
