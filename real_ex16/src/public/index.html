@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Generator</h1>
+
+    <button onclick="generate()">Generate Data</button>
+    <button onclick="clearData()">Clear Data</button>
+    <div id = "data"></div>
+
+    <script>
+        async function generate() {
+            const res = await fetch('/api/employees/generate', { method: 'POST' })
+            const data = await res.json()
+            console.log(data)
+            document.getElementById("data").innerText = data.message
+        }
+
+        async function clearData() {
+            const res = await fetch('/api/employees/clear', { method: 'DELETE' })
+            const data = await res.json()
+            console.log(data)
+            document.getElementById("data").innerText = `Cleared ${data.deleted} employees`
+        }
+    </script>
+</body>
+</html>
+
