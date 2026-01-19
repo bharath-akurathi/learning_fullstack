@@ -1,0 +1,27 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav,
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    gap: 34px;
+}
+
+nav {
+    margin: 0px;
+    padding: 0px;
+    padding: 23px;
+    background-color: beige;
+    color: black;
+}
