@@ -5,3 +5,9 @@
 .cards{
   display: flex;
 }
+
+.MouseArea{
+  background-color: aquamarine;
+  height:344px;
+  width: 344px;
+}
