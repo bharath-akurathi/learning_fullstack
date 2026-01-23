@@ -9,7 +9,7 @@ function App() {
   const [editingId, setEditingId] = useState(null)
   const [editingText, setEditingText] = useState("")
   const hasLoaded = useRef(false);
-  const remainingCount = todos.length;
+  const remainingCount = todos.filter(todo => !todo.completed).length;
 
   useEffect(() => {
     const storedTodos = localStorage.getItem("todos");
